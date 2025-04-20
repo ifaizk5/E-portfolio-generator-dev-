@@ -1,0 +1,341 @@
+/* Reset & Font */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f4f8;
+    color: #333;
+  }
+  
+  /* Container */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 280px;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.04);
+    flex-shrink: 0;
+  }
+  
+  .sidebar-header h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  
+  .sidebar-nav {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .sidebar-nav button {
+    background: #f5f7fb;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+    transition: background 0.3s ease;
+  }
+  
+  .sidebar-nav button.active,
+  .sidebar-nav button:hover {
+    background-color: #dfe8fc;
+    color: #1a3dd6;
+  }
+  
+  .preview-btn {
+    margin-top: 20px;
+    background-color: #1a3dd6;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Generator */
+  .generator-container {
+    display: flex;
+  }
+  
+  .form-container {
+    flex: 1;
+    padding: 30px;
+    background: #ffffff;
+  }
+  
+  /* Forms */
+  .form-section {
+    background-color: #f9fbff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.03);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Array Items */
+  .array-item {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .remove-btn,
+  .add-btn {
+    margin-top: 10px;
+    background-color: #f05454;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .add-btn {
+    background-color: #00b894;
+  }
+  
+  /* Preview Mode */
+  .preview-container {
+    padding: 20px;
+  }
+  
+  .preview-actions {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .preview-actions button {
+    background-color: #1a3dd6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .image-preview img {
+    margin-top: 10px;
+    border-radius: 10px;
+    max-height: 100px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .generator-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      border-radius: 0;
+    }
+  
+    .form-row {
+      flex-direction: column;
+    }
+  }
+
+  .preview-btn{
+    --bg: rgb(0, 0, 0) !important;
+  }
+
+  .sidebar-nav button,.preview-btn{
+    --bg: rgba(0, 0, 0, 0.5);
+    --hover-bg: rgb(117, 151, 255);
+    --hover-text: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+  }
+
+  .sidebar-nav button:hover,.preview-btn:hover{
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+
+  .sidebar-nav button:active,.preview-btn:active{
+
+      transform: translate(0);
+      box-shadow: none;}
+  
+  /* History Component Styles */
+  .history-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .portfolio-list {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .portfolio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9fbff;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .portfolio-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .portfolio-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .portfolio-info p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .portfolio-info small {
+    color: #888;
+    font-size: 12px;
+  }
+  
+  .portfolio-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .portfolio-actions button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .view-btn {
+    color: #1a73e8;
+  }
+  
+  .delete-btn {
+    color: #dc3545;
+  }
+  
+  .portfolio-actions button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .save-btn {
+    margin-top: 20px;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .save-btn:hover {
+    background-color: #00a382;
+    transform: translateY(-2px);
+  }
+  
+  .save-btn:active {
+    transform: translateY(0);
+  }
+  
+  .loading, .error {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+  }
+  
+  .error {
+    color: #dc3545;
+  }
+  
+  .retry-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .retry-btn:hover {
+    background-color: #5a6268;
+  }
+  
